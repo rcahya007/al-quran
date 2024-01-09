@@ -1,3 +1,4 @@
+import 'package:all_quran/pages/initial_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,8 +14,7 @@ class SplashPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              color: Colors.amber,
+            SizedBox(
               width: 200,
               child: Column(
                 children: [
@@ -63,22 +63,36 @@ class SplashPage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  bottom: -23,
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 40,
-                      vertical: 17,
-                    ),
-                    decoration: BoxDecoration(
-                      color: const Color(0xffF9B091),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Text(
-                      'Get Started',
-                      style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Theme.of(context).colorScheme.background,
+                  bottom: 0,
+                  left: 314 / 5,
+                  child: Transform.translate(
+                    offset: const Offset(0, 23),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const InitialPage(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 40,
+                          vertical: 17,
+                        ),
+                        decoration: BoxDecoration(
+                          color: const Color(0xffF9B091),
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: Text(
+                          'Get Started',
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Theme.of(context).colorScheme.background,
+                          ),
+                        ),
                       ),
                     ),
                   ),

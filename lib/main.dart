@@ -1,5 +1,7 @@
+import 'package:all_quran/pages/home_page.dart';
+import 'package:all_quran/pages/initial_page.dart';
 import 'package:all_quran/pages/splash_page.dart';
-import 'package:all_quran/themes/dark_mode.dart';
+import 'package:all_quran/themes/light_mode.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: lightMode,
-      home: const SplashPage()
-    );
+        debugShowCheckedModeBanner: false,
+        theme: lightMode,
+        home: const InitialPage());
   }
 }
